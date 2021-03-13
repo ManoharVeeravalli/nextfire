@@ -1,8 +1,7 @@
-import Link from 'next/link'
 import Loader from '../components/Loader';
 import PostFeed from '../components/PostFeed';
-import toast from 'react-hot-toast';
 import { firestore, postToJSON, fromMillis } from '../lib/firebase';
+import Metatags from '../components/Metatags';
 import { useState } from 'react';
 export default function Home(props) {
   const [posts, setPosts] = useState(props.posts);
@@ -33,6 +32,7 @@ export default function Home(props) {
   }
   return (
     <main>
+      <Metatags />
       <PostFeed posts={posts} admin={false} />
 
       {!loading && !postsEnd && <button onClick={getMorePosts}>Load more</button>}
