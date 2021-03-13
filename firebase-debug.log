@@ -1,0 +1,56 @@
+[debug] [2021-03-13T08:21:04.831Z] ----------------------------------------------------------------------
+[debug] [2021-03-13T08:21:04.832Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\mveeravalli\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2021-03-13T08:21:04.833Z] CLI Version:   9.6.1
+[debug] [2021-03-13T08:21:04.833Z] Platform:      win32
+[debug] [2021-03-13T08:21:04.833Z] Node Version:  v14.15.0
+[debug] [2021-03-13T08:21:04.833Z] Time:          Sat Mar 13 2021 13:51:04 GMT+0530 (India Standard Time)
+[debug] [2021-03-13T08:21:04.833Z] ----------------------------------------------------------------------
+[debug] [2021-03-13T08:21:04.834Z] 
+[debug] [2021-03-13T08:21:04.838Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2021-03-13T08:21:04.838Z] > authorizing via signed-in user
+[debug] [2021-03-13T08:21:04.839Z] [iam] checking project nextfire-147 for permissions ["datastore.indexes.create","datastore.indexes.delete","datastore.indexes.list","datastore.indexes.update","firebase.projects.get","firebaserules.releases.create","firebaserules.releases.update","firebaserules.rulesets.create"]
+[debug] [2021-03-13T08:21:04.840Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/nextfire-147:testIamPermissions  
+ {"permissions":["datastore.indexes.create","datastore.indexes.delete","datastore.indexes.list","datastore.indexes.update","firebase.projects.get","firebaserules.releases.create","firebaserules.releases.update","firebaserules.rulesets.create"]}
+[debug] [2021-03-13T08:21:06.194Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Sat, 13 Mar 2021 08:21:06 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","server-timing":"gfet4t7; dur=1149","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[info] 
+[info] === Deploying to 'nextfire-147'...
+[info] 
+[info] i  deploying storage, firestore 
+[debug] [2021-03-13T08:21:06.199Z] >>> HTTP REQUEST GET https://appengine.googleapis.com/v1/apps/nextfire-147  
+ 
+[debug] [2021-03-13T08:21:06.826Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Sat, 13 Mar 2021 08:21:06 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[info] i  firebase.storage: checking storage.rules for compilation errors... 
+[debug] [2021-03-13T08:21:06.832Z] >>> HTTP REQUEST POST https://firebaserules.googleapis.com/v1/projects/nextfire-147:test  
+ {"source":{"files":[{"name":"storage.rules","content":"rules_version = '2';\nservice firebase.storage {\n  match /b/{bucket}/o {\n    match /{allPaths=**} {\n      allow read, write: if request.auth!=null;\n    }\n  }\n}\n"}]}}
+[debug] [2021-03-13T08:21:28.042Z] Error: connect ETIMEDOUT 216.58.200.138:443
+    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1146:16)
+[error] 
+[error] Error: Server Error. connect ETIMEDOUT 216.58.200.138:443
+[debug] [2021-03-13T08:21:59.656Z] ----------------------------------------------------------------------
+[debug] [2021-03-13T08:21:59.657Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\mveeravalli\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2021-03-13T08:21:59.658Z] CLI Version:   9.6.1
+[debug] [2021-03-13T08:21:59.658Z] Platform:      win32
+[debug] [2021-03-13T08:21:59.658Z] Node Version:  v14.15.0
+[debug] [2021-03-13T08:21:59.658Z] Time:          Sat Mar 13 2021 13:51:59 GMT+0530 (India Standard Time)
+[debug] [2021-03-13T08:21:59.658Z] ----------------------------------------------------------------------
+[debug] [2021-03-13T08:21:59.659Z] 
+[debug] [2021-03-13T08:21:59.663Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2021-03-13T08:21:59.664Z] > authorizing via signed-in user
+[debug] [2021-03-13T08:21:59.664Z] [iam] checking project nextfire-147 for permissions ["datastore.indexes.create","datastore.indexes.delete","datastore.indexes.list","datastore.indexes.update","firebase.projects.get","firebaserules.releases.create","firebaserules.releases.update","firebaserules.rulesets.create"]
+[debug] [2021-03-13T08:21:59.665Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/nextfire-147:testIamPermissions  
+ {"permissions":["datastore.indexes.create","datastore.indexes.delete","datastore.indexes.list","datastore.indexes.update","firebase.projects.get","firebaserules.releases.create","firebaserules.releases.update","firebaserules.rulesets.create"]}
+[debug] [2021-03-13T08:22:01.018Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Sat, 13 Mar 2021 08:22:00 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","server-timing":"gfet4t7; dur=1197","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[info] 
+[info] === Deploying to 'nextfire-147'...
+[info] 
+[info] i  deploying storage, firestore 
+[debug] [2021-03-13T08:22:01.020Z] >>> HTTP REQUEST GET https://appengine.googleapis.com/v1/apps/nextfire-147  
+ 
+[debug] [2021-03-13T08:22:01.540Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Sat, 13 Mar 2021 08:22:01 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[info] i  firebase.storage: checking storage.rules for compilation errors... 
+[debug] [2021-03-13T08:22:01.542Z] >>> HTTP REQUEST POST https://firebaserules.googleapis.com/v1/projects/nextfire-147:test  
+ {"source":{"files":[{"name":"storage.rules","content":"rules_version = '2';\nservice firebase.storage {\n  match /b/{bucket}/o {\n    match /{allPaths=**} {\n      allow read, write: if request.auth!=null;\n    }\n  }\n}\n"}]}}
+[debug] [2021-03-13T08:22:22.682Z] Error: connect ETIMEDOUT 216.58.200.138:443
+    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1146:16)
+[error] 
+[error] Error: Server Error. connect ETIMEDOUT 216.58.200.138:443
